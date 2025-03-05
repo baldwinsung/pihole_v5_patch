@@ -1,0 +1,22 @@
+75c75,76
+< webInterfaceGitUrl="https://github.com/pi-hole/web.git"
+---
+> #webInterfaceGitUrl="https://github.com/pi-hole/web.git"
+> webInterfaceGitUrl="https://github.com/pi-hole/web.git  --branch v5.21"
+77a79
+> piholeGitUrl="https://github.com/pi-hole/pi-hole.git"
+436c438,439
+<     git clone -q --depth 20 "${remoteRepo}" "${directory}" &> /dev/null || return $?
+---
+>     #git clone -q --depth 20 "${remoteRepo}" "${directory}" &> /dev/null || return $?
+>     git clone --branch v5.18.4 -q --depth 20 "${remoteRepo}" "${directory}" &> /dev/null || return $?
+2231c2234,2235
+<         url="https://github.com/pi-hole/ftl/releases/latest/download"
+---
+>         #url="https://github.com/pi-hole/ftl/releases/latest/download"
+> 	url="https://github.com/pi-hole/FTL/releases/download/v5.25.2"
+2233c2237,2238
+<         url="https://ftl.pi-hole.net/${ftlBranch}"
+---
+>         #url="https://ftl.pi-hole.net/${ftlBranch}"
+> 	url="https://github.com/pi-hole/FTL/releases/download/v5.25.2"
